@@ -1,0 +1,78 @@
+{
+  "name": "mytranslator-webpack",
+  "displayName": "mytranslator-webpack",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.37.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./dist/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.mytranslator.translate",
+        "title": "Translate",
+        "category": "MyTranslator"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "extension.mytranslator.translate",
+        "key": "ctrl+shift+t",
+        "mac": "cmd+shift+t",
+        "when": "editorHasSelection"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "MyTranslator Configuration",
+      "properties": {
+        "mytranslator.subKeyTranslator": {
+          "type": "string",
+          "default": "********************************",
+          "description": "Subscription Key for Azure Cognitive Translator API"
+        },
+        "mytranslator.targetLanguage": {
+          "type": "string",
+          "default": "ja",
+          "description": "Target Language Code (en, fr, de, ja, zh-Hans,...)"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "package": "vsce package",
+    "publish": "vsce publish",
+    "vscode:prepublish": "webpack --mode production",
+    "watch": "webapck --mode node --watch",
+    "test-compile": "tsc -p ./ && npm run webpack",
+    "pretest": "npm run test-compile",
+    "test": "node ./out/test/runTest.js",
+    "webpack": "webpack --mode none"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.1",
+    "@types/mocha": "^5.2.6",
+    "@types/needle": "^2.0.4",
+    "@types/node": "^10.12.21",
+    "@types/vscode": "^1.37.0",
+    "glob": "^7.1.4",
+    "mocha": "^6.1.4",
+    "ts-loader": "^6.0.4",
+    "tslint": "^5.12.1",
+    "typescript": "^3.3.1",
+    "vscode-test": "^1.0.2",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7"
+  },
+  "dependencies": {
+    "needle": "^2.4.0",
+    "uuidv4": "^4.0.0"
+  }
+}

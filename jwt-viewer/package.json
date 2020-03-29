@@ -1,0 +1,67 @@
+{
+  "name": "jwt-viewer",
+  "displayName": "jwt-viewer",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.40.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:jwtviewer.decode"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "jwtviewer.decode",
+        "title": "Decocde",
+        "category": "JWTViewer",
+        "icon": {
+          "light": "resources/heart.svg",
+          "dark": "resources/heart.svg"
+        }
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "jwtviewer.decode",
+        "key": "ctrl+shift+d",
+        "mac": "cmd+shift+d",
+        "when": "editorHasSelection"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "when": "editorHasSelection",
+          "command": "jwtviewer.decode",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.1",
+    "@types/jwt-decode": "^2.2.1",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.11.7",
+    "@types/vscode": "^1.40.0",
+    "glob": "^7.1.5",
+    "mocha": "^6.2.2",
+    "typescript": "^3.6.4",
+    "tslint": "^5.20.0",
+    "vscode-test": "^1.2.2"
+  },
+  "dependencies": {
+    "jwt-decode": "^2.2.0"
+  }
+}

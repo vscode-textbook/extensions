@@ -1,0 +1,13 @@
+{
+
+  "Insert table": { 
+    "prefix": "table", 
+    "body": [
+      "| ${1:Heading} | ${2:Heading} |",
+      "| --- | --- |",
+      "| ${3:Content} | ${4:Content} |"
+    ],
+    "description": "Insert Table" 
+  }
+
+}

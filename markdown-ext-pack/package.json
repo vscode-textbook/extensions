@@ -1,0 +1,20 @@
+{
+  "name": "markdown-ext-pack",
+  "displayName": "markdown-ext-pack",
+  "publisher": "yokawasa",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.40.0"
+  },
+  "categories": [
+    "Extension Packs"
+  ],
+  "extensionPack": [
+    "shd101wyy.markdown-preview-enhanced",
+    "DavidAnson.vscode-markdownlint",
+    "mdickin.markdown-shortcuts",
+    "AlanWalk.markdown-toc",
+    "bierner.markdown-emoji"
+  ]
+}
