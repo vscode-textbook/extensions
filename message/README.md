@@ -1,3 +1,1 @@
-# README for the extension
-
-This is sample `README` for the extension
+# 拡張機能サンプル: 通知メッセージ表示サンプル (Message)
