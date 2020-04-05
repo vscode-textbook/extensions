@@ -1,10 +1,11 @@
 {
   "name": "mytranslator-webpack",
   "displayName": "mytranslator-webpack",
+  "publisher": "yokawasa",
   "description": "",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.37.0"
+    "vscode": "^1.43.0"
   },
   "categories": [
     "Other"
@@ -61,15 +62,15 @@
     "@types/mocha": "^5.2.6",
     "@types/needle": "^2.0.4",
     "@types/node": "^10.12.21",
-    "@types/vscode": "^1.37.0",
+    "@types/vscode": "^1.43.0",
     "glob": "^7.1.4",
     "mocha": "^6.1.4",
     "ts-loader": "^6.0.4",
     "tslint": "^5.12.1",
     "typescript": "^3.3.1",
     "vscode-test": "^1.0.2",
-    "webpack": "^4.39.2",
-    "webpack-cli": "^3.3.7"
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
   },
   "dependencies": {
     "needle": "^2.4.0",
