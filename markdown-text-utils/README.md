@@ -1,3 +1,1 @@
-# README for the extension
-
-This is sample `README` for the extension
+# 拡張機能サンプル: Markdown簡単入力機能(太字/イタリック/打ち消し線)
