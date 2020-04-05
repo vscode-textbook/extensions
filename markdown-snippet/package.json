@@ -1,6 +1,7 @@
 {
     "name": "markdown-snippet",
     "displayName": "markdown-snippet",
+    "publisher": "yokawasa",
     "description": "",
     "version": "0.0.1",
     "engines": {
