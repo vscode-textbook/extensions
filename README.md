@@ -13,8 +13,8 @@ VS Code Textbook Part3 - VS Code Extension Sample Code
 | Webview | [webview](webview) |
 | Outputパネル出力 (Output Channel) | [outputchannel](outputchannel) |
 | Markdownスニペット | [markdown-snippet](markdown-snippet) |
-| Markdownテーブルメーカー  | [markdown-table-maker](markdown-table-maker) |
-| Markdownユーティリティツール | [markdown-text-utils](markdown-text-utils) |
+| Markdownテーブル作成機能  | [markdown-table-maker](markdown-table-maker) |
+| Markdown簡単入力機能  | [markdown-text-utils](markdown-text-utils) |
 | Markdown Extension Pack | [markdown-ext-pack](markdown-ext-pack) |
 | JWT Viewer (Json Web Token) | [jwt-viewer](jwt-viewer) |
 | テキスト翻訳 | [mytranslator](mytranslator) |
