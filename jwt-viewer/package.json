@@ -4,20 +4,18 @@
   "description": "",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.43.0"
+    "vscode": "^1.83.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [
-    "onCommand:jwtviewer.decode"
-  ],
+  "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "jwtviewer.decode",
-        "title": "Decocde",
+        "title": "Decode",
         "category": "JWTViewer",
         "icon": {
           "light": "resources/heart.svg",
