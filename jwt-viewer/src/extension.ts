@@ -9,12 +9,11 @@ export function activate(context: vscode.ExtensionContext) {
     if (!editor) {
       return;
     }
-    let selections: vscode.Selection[] = editor.selections;
-    if (selections.length > 1) {
+    if (editor.selections.length > 1) {
       vscode.window.showErrorMessage('[JWTDebugger] Sorry, multiple text is not supported!');
       return;
     }
-    let selection: vscode.Selection = selections[0];
+    let selection: vscode.Selection = editor.selections[0];
     let encoded_text:string = editor.document.getText(
       new vscode.Range(selection.start, selection.end
     ));
@@ -36,7 +35,7 @@ export function activate(context: vscode.ExtensionContext) {
       panel.webview.html = getWebviewContent(encoded_text, decodedHeader, decodedPayload);
     
     } catch (e){
-      if (e.name === 'InvalidTokenError') {
+      if ((e as any).name === 'InvalidTokenError') {
         vscode.window.showErrorMessage('Invalid Token Error!');
       }
     }
