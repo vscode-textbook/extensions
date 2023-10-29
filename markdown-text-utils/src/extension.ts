@@ -32,9 +32,8 @@ export function deactivate() {}
 function replaceText(callback: (text: string) => string): void {
   const editor = vscode.window.activeTextEditor;
   if (editor) {
-    let selections: vscode.Selection[] = editor.selections;
     editor.edit(builder => {
-      for (const selection of selections) {
+      for (const selection of editor.selections) {
         const selectedText = editor.document.getText(
           new vscode.Range(selection.start, selection.end
         ));
