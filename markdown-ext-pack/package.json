@@ -5,16 +5,16 @@
   "description": "",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.43.0"
+    "vscode": "^1.83.0"
   },
   "categories": [
     "Extension Packs"
   ],
-  "extensionPack": [
+  "extensionPack": [ 
     "shd101wyy.markdown-preview-enhanced",
     "DavidAnson.vscode-markdownlint",
     "mdickin.markdown-shortcuts",
-    "AlanWalk.markdown-toc",
+    "huntertran.auto-markdown-toc",
     "bierner.markdown-emoji"
   ]
 }
