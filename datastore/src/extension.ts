@@ -15,8 +15,12 @@ export function activate(context: vscode.ExtensionContext) {
     context.workspaceState.update(COUNTER_KEY, counter);
 
     //// Show Storage Path
-    console.log(`Workspace Storage Path: ${context.storagePath}`);
-    console.log(`Global Storage Path: ${context.globalStoragePath}`);
+    // storagePath is deprecated
+    // console.log(`Workspace Storage Path: ${context.storagePath}`);
+    console.log(`Workspace Storage Path: ${context.storageUri}`);
+    // globalStoragePath is deprecated
+    // console.log(`Global Storage Path: ${context.globalStoragePath}`);
+    console.log(`Global Storage Path: ${context.globalStorageUri}`);
   });
 
   context.subscriptions.push(disposable);
