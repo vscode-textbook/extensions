@@ -2,28 +2,28 @@ import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
 
-  let disposable_bold = vscode.commands.registerCommand(
+  let disposableBold = vscode.commands.registerCommand(
     'mdtextutils.bold', () => {
       replaceText( text => {
         return `**${text}**`;
       });
   });
-  let disposable_italic = vscode.commands.registerCommand(
+  let disposableItalic = vscode.commands.registerCommand(
     'mdtextutils.italic', () => {
       replaceText( text => {
         return `_${text}_`;
       });
   });
-  let disposable_strikethrough = vscode.commands.registerCommand(
+  let disposableStrikethrough = vscode.commands.registerCommand(
     'mdtextutils.strikethrough', () => {
       replaceText( text => {
         return `~~${text}~~`;
       });
   });
   context.subscriptions.push(
-    disposable_bold,
-    disposable_italic,
-    disposable_strikethrough
+    disposableBold,
+    disposableItalic,
+    disposableStrikethrough
   );
 }
 
