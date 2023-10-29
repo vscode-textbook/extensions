@@ -13,26 +13,26 @@ export function activate(context: vscode.ExtensionContext) {
       vscode.window.showErrorMessage('[JWTDebugger] Sorry, multiple text is not supported!');
       return;
     }
-    let selection: vscode.Selection = editor.selections[0];
-    let encoded_text:string = editor.document.getText(
+    let selection:vscode.Selection = editor.selections[0];
+    let encodedText:string = editor.document.getText(
       new vscode.Range(selection.start, selection.end
     ));
-    if (encoded_text.length < 1) {
+    if (encodedText.length < 1) {
       vscode.window.showErrorMessage('Please select text!');
       return;
     }
 
     try {
       
-      const decodedHeader = jwtDecode(encoded_text, { header: true });
-      const decodedPayload = jwtDecode(encoded_text);
+      const decodedHeader = jwtDecode(encodedText, { header: true });
+      const decodedPayload = jwtDecode(encodedText);
       const panel = vscode.window.createWebviewPanel(
           'previewJWTDecoded',
           'Preview JWT Decoded Result',
           vscode.ViewColumn.Two,
           {}
         );
-      panel.webview.html = getWebviewContent(encoded_text, decodedHeader, decodedPayload);
+      panel.webview.html = getWebviewContent(encodedText, decodedHeader, decodedPayload);
     
     } catch (e){
       if ((e as any).name === 'InvalidTokenError') {
