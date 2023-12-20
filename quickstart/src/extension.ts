@@ -1,26 +1,36 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
+// 'vscode'モジュールにはVS Code拡張APIが含まれています
 import * as vscode from 'vscode';
+import { dateFormat } from "./dateformat";
 
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
+// このメソットは拡張機能がアクティベートされるときに一度だけ呼ばれます。
 export function activate(context: vscode.ExtensionContext) {
 
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "quickstart" is now active!');
+  // 診断情報を出力するときはconsoleを、エラー情報を出力するときはconsole.error
+  // をお使いください
+  console.log('Congratulations, your extension "quickstart" is now active!');
 
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('quickstart.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from quickstart!');
-	});
+  // package.jsonに定義されたコマンドの実装をregisterCommandで登録します
+  // コマンドIDはpackage.jsonに記述したものと同一である必要があります
+  let disposableHelloworld = vscode.commands.registerCommand('quickstart.helloWorld', () => {
+    // ここに書かれたコードはコマンドが実行される度に実行されます
 
-	context.subscriptions.push(disposable);
+    // メッセージボックスを表示します
+    vscode.window.showInformationMessage('Hello World from quickstart!');
+  });
+
+  // vscode.commands.registerCommandによりコマンドquickstart.getTodayを追加
+  let disposableGettoday = vscode.commands.registerCommand('quickstart.getToday', () => {
+    let today: Date = new Date();
+    vscode.window.showInformationMessage("Today:" + dateFormat(today));
+  });
+
+  // 解放対象のリソースを追加します
+  context.subscriptions.push(
+    disposableHelloworld,
+    disposableGettoday
+  );
 }
 
-// This method is called when your extension is deactivated
+// このメソッドは拡張機能がディアクテベートされるときに呼ばれます
 export function deactivate() {}
+

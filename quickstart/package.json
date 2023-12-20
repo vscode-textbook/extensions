@@ -16,6 +16,10 @@
       {
         "command": "quickstart.helloWorld",
         "title": "Hello World"
+      },
+      {
+        "command": "quickstart.getToday",
+        "title": "Get Today"
       }
     ]
   },
