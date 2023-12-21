@@ -8,8 +8,8 @@ export function activate(context: vscode.ExtensionContext) {
     }
   });
 
-  let helloworld = vscode.commands.registerCommand('extension.helloWorld',
+  let helloWorld = vscode.commands.registerCommand('extension.helloWorld',
     () => vscode.commands.executeCommand("extension.show", "Hello World"));
 
-  context.subscriptions.push(show, helloworld);
+  context.subscriptions.push(show, helloWorld);
 }
