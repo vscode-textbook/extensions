@@ -11,7 +11,7 @@
 
 - [`contributes.commands`](https://code.visualstudio.com/api/references/contribution-points#contributes.commands)
 - [`contributes.keybindings`](https://code.visualstudio.com/api/references/contribution-points#contributes.keybindings)
-- [`contributes.menus`](https://github.com/asashiho/practical-vscode/tree/master/Part3/extensions/contextmenu)
+- [`contributes.menus`](https://code.visualstudio.com/api/references/contribution-points#contributes.menus)
 
 ## サンプル実行
 

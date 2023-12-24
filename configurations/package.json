@@ -4,7 +4,7 @@
   "description": "",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.83.0"
+    "vscode": "^1.85.0"
   },
   "categories": [
     "Other"
@@ -52,7 +52,7 @@
     "watch": "tsc -watch -p ./"
   },
   "devDependencies": {
-    "@types/vscode": "^1.83.0",
+    "@types/vscode": "^1.85.0",
     "@types/mocha": "^10.0.2",
     "@types/node": "18.x",
     "@typescript-eslint/eslint-plugin": "^6.7.3",
