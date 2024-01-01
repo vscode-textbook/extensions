@@ -1,6 +1,6 @@
 # extensions
 
-VS Code Textbook Part3 - VS Code Extension Sample Code 
+プログラマーのためのVisual Studio Codeの教科書 - Part3 VS Code 拡張機能サンプルコード
 
 | サンプル | ソース  |
 | ---- | ---- |
