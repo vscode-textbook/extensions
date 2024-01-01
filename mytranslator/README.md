@@ -1,6 +1,6 @@
 # 拡張機能サンプル: テキスト翻訳 (MyTranslator)
 
-**\[Warning\] This is a deprecated project and will be removed in the future book revision.**
+**\[Warning\] This is a deprecated project and will be removed in the future book revision. [警告] このプロジェクトは将来の書籍改訂で削除される予定です。**
 
 ## VS Code API
 
