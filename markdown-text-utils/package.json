@@ -4,16 +4,12 @@
 	"description": "",
 	"version": "0.0.1",
 	"engines": {
-		"vscode": "^1.43.0"
+		"vscode": "^1.85.0"
 	},
 	"categories": [
 		"Other"
 	],
-	"activationEvents": [
-		"onCommand:mdtextutils.bold",
-		"onCommand:mdtextutils.italic",
-		"onCommand:mdtextutils.strikethrough"
-	],
+	"activationEvents": [],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
@@ -40,14 +36,15 @@
 		"watch": "tsc -watch -p ./"
 	},
 	"devDependencies": {
-		"@types/glob": "^7.1.1",
-		"@types/mocha": "^5.2.7",
-		"@types/node": "^12.11.7",
-		"@types/vscode": "^1.43.0",
-		"glob": "^7.1.5",
-		"mocha": "^10.2.0",
-		"typescript": "^3.6.4",
-		"tslint": "^5.20.0",
-		"vscode-test": "^1.2.2"
+    "@types/vscode": "^1.85.0",
+    "@types/mocha": "^10.0.2",
+    "@types/node": "18.x",
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
+    "@typescript-eslint/parser": "^6.7.3",
+    "eslint": "^8.50.0",
+    "glob": "^10.3.3",
+    "mocha": "^10.2.0",
+    "typescript": "^5.2.2",
+    "@vscode/test-electron": "^2.3.4"
 	}
 }

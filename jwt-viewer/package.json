@@ -4,20 +4,18 @@
   "description": "",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.43.0"
+    "vscode": "^1.85.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [
-    "onCommand:jwtviewer.decode"
-  ],
+  "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "jwtviewer.decode",
-        "title": "Decocde",
+        "title": "Decode",
         "category": "JWTViewer",
         "icon": {
           "light": "resources/heart.svg",
@@ -47,19 +45,22 @@
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
-    "pretest": "npm run compile"
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
-    "@types/glob": "^7.1.1",
     "@types/jwt-decode": "^2.2.1",
-    "@types/mocha": "^5.2.7",
-    "@types/node": "^12.11.7",
-    "@types/vscode": "^1.43.0",
-    "glob": "^7.1.5",
+    "@types/mocha": "^10.0.2",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.85.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.3",
+    "@typescript-eslint/parser": "^6.7.3",
+    "eslint": "^8.50.0",
+    "glob": "^10.3.3",
     "mocha": "^10.2.0",
-    "typescript": "^3.6.4",
-    "tslint": "^5.20.0",
-    "vscode-test": "^1.2.2"
+    "typescript": "^5.2.2",
+    "@vscode/test-electron": "^2.3.4"
   },
   "dependencies": {
     "jwt-decode": "^2.2.0"

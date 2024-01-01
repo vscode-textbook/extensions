@@ -2,18 +2,18 @@ import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
 
-  let choosecolor_command = vscode.commands.registerCommand('samplequickinput.choosecolor', () => {
+  let choosecolorCommand = vscode.commands.registerCommand('samplequickinput.choosecolor', () => {
     chooseColor();
   });
-  let chooseaction_command = vscode.commands.registerCommand('samplequickinput.chooseaction', () => {
+  let chooseactionCommand = vscode.commands.registerCommand('samplequickinput.chooseaction', () => {
     chooseAction();
   });
-  let inputyourname_command = vscode.commands.registerCommand('samplequickinput.inputyourname', () => {
+  let inputyournameCommand = vscode.commands.registerCommand('samplequickinput.inputyourname', () => {
     inputYourName();
   });
 
   context.subscriptions.push(
-    choosecolor_command, chooseaction_command, inputyourname_command);
+    choosecolorCommand, chooseactionCommand, inputyournameCommand);
 }
 
 export function deactivate() {}

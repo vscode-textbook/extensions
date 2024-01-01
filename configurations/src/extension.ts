@@ -3,7 +3,7 @@ import * as vscode from 'vscode';
 export function activate(context: vscode.ExtensionContext) {
   console.log('Congratulations, your extension "sampleconfigurations" is now active!');
 
-  let getconfig_command = vscode.commands.registerCommand('extension.getconfig', () => {
+  let getConfigCommand = vscode.commands.registerCommand('extension.getconfig', () => {
     vscode.window.showInformationMessage('Get Config!');
     const config = vscode.workspace.getConfiguration('sampleconfig');
     console.log(`sampleconfig.stringitem=${config.get('stringitem')}`);
@@ -12,7 +12,7 @@ export function activate(context: vscode.ExtensionContext) {
   });
 
   //Update a configuration value. The updated configuration values are persisted.
-  let updateconfig_command = vscode.commands.registerCommand('extension.updateconfig', () => {
+  let updateConfigCommand = vscode.commands.registerCommand('extension.updateconfig', () => {
     vscode.window.showInformationMessage('Update Config!');
     const config = vscode.workspace.getConfiguration('sampleconfig');
     config.update('stringitem', 'hey', true);
@@ -20,7 +20,7 @@ export function activate(context: vscode.ExtensionContext) {
     config.update('booleanitem', true, true);
   });
 
-  context.subscriptions.push(getconfig_command, updateconfig_command);
+  context.subscriptions.push(getConfigCommand, updateConfigCommand);
 }
 
 export function deactivate() {}

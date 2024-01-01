@@ -1,4 +1,5 @@
 # extensions
+
 VS Code Textbook Part3 - VS Code Extension Sample Code 
 
 | サンプル | ソース  |
@@ -17,6 +18,7 @@ VS Code Textbook Part3 - VS Code Extension Sample Code
 | Markdown簡単入力機能  | [markdown-text-utils](markdown-text-utils) |
 | Markdown Extension Pack | [markdown-ext-pack](markdown-ext-pack) |
 | JWT Viewer (Json Web Token) | [jwt-viewer](jwt-viewer) |
+| Webpack サンプル (JWT Viewer) | [jwt-viewer-webpack](jwt-viewer-webpack) |
 | テキスト翻訳 | [mytranslator](mytranslator) |
 | Webpackサンプル (テキスト翻訳) | [mytranslator-webpack](mytranslator-webpack) |
 | VS Code CI サンプルレポジトリ| [vscode-extension-ci](https://github.com/vscode-textbook/vscode-extension-ci) |
