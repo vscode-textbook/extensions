@@ -1,5 +1,5 @@
 import * as assert from 'assert';
-import { dateFormat } from '../../dateformat';
+import { dateFormat } from '../dateformat';
 
 suite('GetToday Test Suite', () => {
   test('Dateformat test', () => {
