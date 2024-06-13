@@ -71,7 +71,7 @@
     "typescript": "^3.3.1",
     "vscode-test": "^1.0.2",
     "webpack": "^5.76.0",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^5.1.4"
   },
   "dependencies": {
     "needle": "^2.4.0",
