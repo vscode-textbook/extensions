@@ -1,6 +1,6 @@
 # extensions
 
-プログラマーのためのVisual Studio Codeの教科書 - Part3 VS Code 拡張機能サンプルコード
+プログラマーのためのVisual Studio Codeの教科書 (`初版` & `改訂2版`) - Part3 VS Code 拡張機能サンプルコード
 
 | サンプル | ソース  | 第2版対応 |
 | ---- | ---- | ---- |
