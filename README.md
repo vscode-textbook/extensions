@@ -1,4 +1,4 @@
-# VS Code拡張機能　サンプルコード
+# VS Code拡張機能サンプルコード
 
 これは「プログラマーのためのVisual Studio Codeの教科書 (`改訂2版`)」Part3 VS Code拡張機能のサンプルコードです。
 
